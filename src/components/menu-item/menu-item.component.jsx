@@ -1,4 +1,6 @@
 import React from "react";
+import {withRouter} from 'react-router-dom';
+ 
 import './menu-item.styles.scss';
 
 // using the parenthesis "()" after the arrow is equal to using the braket and then call return inside. 
@@ -19,4 +21,4 @@ const MenuItem = ({title, imageUrl, size}) => (
 </div>
 )
 
-export default MenuItem;
+export default withRouter(MenuItem);
