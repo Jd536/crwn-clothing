@@ -4,10 +4,11 @@ import {withRouter} from 'react-router-dom';
 import './menu-item.styles.scss';
 
 // using the parenthesis "()" after the arrow is equal to using the braket and then call return inside. 
-const MenuItem = ({title, imageUrl, size}) => (
+const MenuItem = ({title, imageUrl, size, history, linkUrl, match}) => (
     <div
     
     className={`${size} menu-item`}
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
     >   
         <div className="background-image"
         style={{
